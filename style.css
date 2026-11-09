@@ -98,7 +98,7 @@ body {
     height: 10px;
     background: linear-gradient(110deg, #70DA1C 50%, #B7ED5D 50%);
     position: absolute;
-    bottom: 210px;
+   
 }
 
 .infor p {
@@ -222,7 +222,8 @@ body {
 
 .areaCursos {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-content: center;
     gap: 1rem;
 }
 
@@ -259,8 +260,7 @@ body {
     height: 20px;
     background-color: var(--cor3);
     position: absolute;
-    top: 50px;
-    right: 178px;
+    left: -3px;
 }
 
 .intensivo {
@@ -331,7 +331,7 @@ footer h3 {
     font-size: 2rem;
     padding: 10px;
     border-radius: 60%;
-    
+
 }
 
 .voltar a:hover {
@@ -438,7 +438,7 @@ footer h3 {
         font-size: 1.3rem;
     }
 
-    footer h3{
+    footer h3 {
         font-size: 1.5rem;
     }
 
@@ -446,12 +446,77 @@ footer h3 {
         font-size: 2rem;
     }
 
-    footer p{
+    footer p {
         font-size: 1.5rem;
     }
 
-    .voltar a{
+    .voltar a {
         padding: 1.4rem;
     }
 
+}
+
+
+@media (max-width:480px) {
+
+    .perfil {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .perfil img {
+        max-width: 60%;
+        justify-self: center;
+    }
+
+    .infor{
+        text-align: center;
+        gap: 10px;
+    }
+
+    .infor::before{
+        top:-10px;
+        left: 9px;
+    }
+
+    .exp h2{
+        text-align: center;
+    }
+
+    .intro{
+        text-align: center;
+    }
+
+    .caixa{
+        grid-template-columns: 1fr;
+    }
+
+    .formacoes{
+         text-align: center;
+    }
+
+    .areaCursos{
+        grid-template-columns: 1fr ;
+        justify-self: center;
+    }
+
+    .intensivo{
+        text-align: left;
+    }
+
+    footer{
+        grid-template-columns: 1fr;
+    }
+
+    .cons{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:375px) {
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+       gap: 2rem 1rem;
+    }
 }
